@@ -43,16 +43,16 @@ The Mood Playlist Generator is a Python-based web app that analyzes a user's **t
  - **NLP & Emotion Detection**  
    Used a fine-tuned DistilRoBERTa model to detect emotions like joy, sadness, fear, and anger from text.
     
- - **Computer Vision**
+ - **Computer Vision**  
    Integrated DeepFace to analyze facial expressions and extract dominant emotions from images. 
    
- - **API Integration**
+ - **API Integration**  
    Connected with Spotify to fetch public playlists based on emotional context.
    
- - **Web Development**
+ - **Web Development**  
    Developed a full-stack Flask app with clean UI and dynamic playlist generation.
    
- - **Security Best Practices**
+ - **Security Best Practices**  
    Managed API keys securely with `.env` and `.gitignore`.
 
 
