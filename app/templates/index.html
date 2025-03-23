@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <title>Mood Playlist Generator</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Linking CSS file using Flask's Jinja function -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <h1>Welcome to Mood Playlist Generator!</h1>
+    <p>Type how you're feeling, or upload a photo to generate a playlist based off your mood.</p>
+
+    <!-- Text input form for mood analysis -->
+    <form action="/" method="POST">
+        <label>Enter your mood: <input type="text" name="text_input"></label>
+        <button type="submit">Analyze Mood</button> 
+    </form>
+
+    <!-- Image upload form for face-based mood detection -->
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <label>Upload an image: <input type="file" name="image"></label>
+        <button type="submit">Analyze Image</button> 
+    </form>
+
+    <!-- Display the detected mood if available -->
+    {% if mood %}
+        <h2>Your Detected Mood: {{ mood }}</h2>
+    {% endif %}
+
+    <!-- Show the playlist details if a mood was detected -->
+    {% if playlist %}
+        <h2>Recommended Playlist: <a href="{{ playlist.url }}" target="_blank">{{ playlist.name }}</a></h2>
+        <a href="{{ playlist.url }}" target="_blank">
+            <img src="{{ playlist.image }}" alt="Spotify Playlist" width="300">
+        </a>
+    {% endif %}
+</body>
+</html>
