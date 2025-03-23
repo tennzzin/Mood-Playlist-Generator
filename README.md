@@ -17,7 +17,7 @@ The Mood Playlist Generator is a Python-based web app that analyzes a user's **t
   - `cd mood-playlist-generator`
 2. Create a Virtual Environment:  
   - `python -m venv venv`
-  - `source venv/bin/activate` / Windows: `venv\Scripts\activate`
+  - Mac: `source venv/bin/activate` / Windows: `venv\Scripts\activate`
 3. Install Dependencies:  
   - `pip install -r requirements.txt`
 4. Set Up Environment Variables:  
