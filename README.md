@@ -22,7 +22,7 @@ The Mood Playlist Generator is a Python-based web app that analyzes a user's **t
   - `pip install -r requirements.txt`
 4. Set Up Environment Variables:  
   - Create a .env file in the root directory and add:  
-      `SPOTIFY_CLIENT_ID=your_client_id`
+      `SPOTIFY_CLIENT_ID=your_client_id`  
       `SPOTIFY_CLIENT_SECRET=your_client_secret`
 5. Run the App:  
   - `python app/routes.py`
